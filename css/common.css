@@ -1,5 +1,7 @@
 body {
   width: 100%;
+  margin: 0;
+  padding: 0;
   max-width: 540px;
   min-width: 320px;
   font-family: -apple-system, Helvetica, sans-serif;
@@ -15,6 +17,11 @@ body input::-webkit-inner-spin-button {
 }
 body input[type="number"] {
   -moz-appearance: textfield;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 body .container .payment-title {
   display: flex;
@@ -69,4 +76,88 @@ body .container .points {
   justify-content: space-between;
   margin: 40px auto;
   color: #9b9b9b;
+}
+body .container .payment-btn div {
+  width: 80%;
+  height: 46px;
+  background-color: #25b11c;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 46px;
+  color: #fff;
+  font-size: 20px;
+}
+body .container .popup {
+  width: 100%;
+  height: 280px;
+  position: fixed;
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  max-width: 540px;
+  min-width: 320px;
+}
+body .container .popup .popup-title {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 0;
+}
+body .container .popup .popup-title a {
+  width: 30px;
+  height: 30px;
+  background: url(../images/close.png) no-repeat;
+  background-size: 30px auto;
+}
+body .container .popup .popup-title span {
+  flex: 1;
+  text-align: center;
+  color: #333333;
+}
+body .container .popup .popup-points {
+  margin: 0 auto;
+  width: 90%;
+}
+body .container .popup .popup-points ul {
+  margin-top: 10px;
+}
+body .container .popup .popup-points ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+body .container .popup .popup-points ul li span {
+  color: #616161;
+  font-size: 14px;
+}
+body .container .popup .popup-btn {
+  width: 100%;
+  position: absolute;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+}
+body .container .popup .popup-btn .btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+body .container .popup .popup-btn .btn-wrap p {
+  margin: 0;
+  flex: 1;
+  color: #636363;
+  font-size: 18px;
+}
+body .container .popup .popup-btn .btn-wrap div {
+  width: 100px;
+  height: 40px;
+  background-color: #1fad15;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
 }

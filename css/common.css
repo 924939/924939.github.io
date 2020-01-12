@@ -139,19 +139,20 @@ body .container .popup .popup-btn {
   position: absolute;
   height: 40px;
   left: 0;
-  bottom: 0;
+  bottom: 5px;
 }
 body .container .popup .popup-btn .btn-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+  border-bottom: 1px solid #999999;
 }
 body .container .popup .popup-btn .btn-wrap p {
   margin: 0;
   flex: 1;
   color: #636363;
-  font-size: 18px;
+  font-size: 22px;
 }
 body .container .popup .popup-btn .btn-wrap div {
   width: 100px;

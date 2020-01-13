@@ -9,9 +9,28 @@ window.onresize = function(){
         let hrt = window.innerHeight;
         $('body').height(hrt);
     }
-}
-var ua = navigator.userAgent.toLowerCase();
-var isWeixin = ua.indexOf('micromessenger') != -1;
-if (!isWeixin) {
-    window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888";
-}
+};
+
+function is_weixin(){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)=="micromessenger") {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+if (!is_weixin()) { 
+    window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdf3f22ebfe96b912&redirect_uri=xxx&response_type=code&scope=snsapi_base&state=hyxt#wechat_redirect';
+};
+
+$(function(){
+    $('.payment-btn').on('click',function(){
+        $('.mask').show();
+        $('.popup').show();       
+    })
+    $('.close').on('click',function(){
+        $('.mask').hide();
+        $('.popup').hide();
+    });
+});

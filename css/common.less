@@ -25,6 +25,12 @@ body{
     .container{
         position: relative;
         height: 100vh;
+        .mask{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0,0,0,.5);            
+        }
         .payment-title{
             display: flex;
             justify-content: center;
@@ -98,7 +104,7 @@ body{
             height: 280px;
             position: absolute;
             left: 50%;
-            bottom: 10px;
+            bottom: 0;
             transform: translateX(-50%);
             background-color: #fff;
             max-width: 540px;   
@@ -142,7 +148,7 @@ body{
                 width: 100%;
                 position: absolute;
                 left: 0;
-                bottom: 5px;
+                bottom: 8px;
                 .btn-wrap{                   
                     display: flex;
                     justify-content: space-between;

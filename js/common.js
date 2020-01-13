@@ -27,7 +27,6 @@ window.onresize = function(){
 // };
 
 $(function(){
-
     $('.point-focus').on('keyup',function () {
         var val = $(this).val();
         $(this).val($(this).val().replace(".","$#$").replace(/\./g, "").replace("$#$", ".").replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3').replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3'));
@@ -36,6 +35,15 @@ $(function(){
         } else if (val.indexOf(".") == 0) {
             $(this).val($(this).val().replace(/[^$#$]/g, "0.")) ;
             $(this).val( $(this).val().replace(/\.{2,}/g, "."));
+        };
+
+        var paymentBtn = $('.payment-btn button');
+        if(val === ''||val === null){
+            paymentBtn.attr('disabled',false)
+            paymentBtn.css('background','#9ed99d')            
+        }else{
+            paymentBtn.removeAttr('disabled');
+            paymentBtn.css('background','#1fad15')           
         }
     })      
 

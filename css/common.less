@@ -16,6 +16,9 @@ body{
     }
     input[type="number"]{
         -moz-appearance: textfield;
+    }  
+    input::-webkit-input-placeholder{
+        font-size: 20px;
     }
     ul{
         margin: 0;
@@ -87,16 +90,20 @@ body{
             color: #9b9b9b;
         }
         .payment-btn {
-
-            div{
+            display: flex;
+            justify-content: center;
+            button{               
+                border: 1px solid #8ec38d;               
+                background-color: transparent;
+                outline: none;
                 width: 80%;
                 height: 46px;
-                background-color: #25b11c;
+                background-color: #9ed99d;
                 margin: 0 auto;
                 border-radius: 5px;
                 text-align: center;
                 line-height: 46px;
-                color: #fff;
+                color: #d8f0d8;
                 font-size: 20px;
             }
         }

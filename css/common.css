@@ -18,6 +18,9 @@ body input::-webkit-inner-spin-button {
 body input[type="number"] {
   -moz-appearance: textfield;
 }
+body input::-webkit-input-placeholder {
+  font-size: 20px;
+}
 body ul {
   margin: 0;
   padding: 0;
@@ -88,15 +91,22 @@ body .container .points {
   margin: 40px auto;
   color: #9b9b9b;
 }
-body .container .payment-btn div {
+body .container .payment-btn {
+  display: flex;
+  justify-content: center;
+}
+body .container .payment-btn button {
+  border: 1px solid #8ec38d;
+  background-color: transparent;
+  outline: none;
   width: 80%;
   height: 46px;
-  background-color: #25b11c;
+  background-color: #9ed99d;
   margin: 0 auto;
   border-radius: 5px;
   text-align: center;
   line-height: 46px;
-  color: #fff;
+  color: #d8f0d8;
   font-size: 20px;
 }
 body .container .popup {

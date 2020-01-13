@@ -12,7 +12,7 @@ window.onresize = function(){
 };
 
 function is_weixin(){
-    var ua = navigator.userAgent.toLowerCase();
+    let ua = navigator.userAgent.toLowerCase();
     if(ua.match(/MicroMessenger/i)=="micromessenger") {
         return true;
     } else {
@@ -20,8 +20,10 @@ function is_weixin(){
     }
 };
 
+let url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdf3f22ebfe96b912&redirect_uri=xxx&response_type=code&scope=snsapi_base&state=hyxt#wechat_redirect';
+
 if (!is_weixin()) { 
-    window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdf3f22ebfe96b912&redirect_uri=xxx&response_type=code&scope=snsapi_base&state=hyxt#wechat_redirect';
+    window.location.href = url;
 };
 
 $(function(){

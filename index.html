@@ -66,8 +66,7 @@
     <script>
         let btn = document.querySelector('#btn');
         btn.onclick = function () {
-            alert('123')
-            wx.miniProgram.switchTab({url: '/pages/order/index'})
+            wx.miniProgram.reLaunch({url: '/pages/order/index?menubar=lottery'})
         }
         
     </script>

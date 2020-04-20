@@ -66,6 +66,7 @@
     <script>
         let btn = document.querySelector('#btn');
         btn.onclick = function () {
+            alert(1)
             wx.miniProgram.reLaunch({url: '/pages/order/index?menubar=lottery'})
         }
         
